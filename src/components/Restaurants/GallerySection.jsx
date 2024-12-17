@@ -18,7 +18,7 @@ function GallerySection() {
   return (
     <>
       {/* Header Section */}
-      <div className="flex items-center justify-center mt-[-3.5%] z-50">
+      <div className="flex items-center justify-center md:mt-[-3.5%] mt-[-10%] z-50">
         <img
           className="rounded-full border-5 border-white "
           src="/Bellaitalia (3).png"

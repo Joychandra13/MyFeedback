@@ -7,7 +7,7 @@ import ReviewCarousel from './ReviewCarousel'
 
 function HomePage() {
   return (
-    <div>
+    <div className='p-2'>
         <IconSection/>
         <Carousel/>
         <CardSection/>

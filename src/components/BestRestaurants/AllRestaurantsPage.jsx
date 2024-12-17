@@ -201,7 +201,7 @@ function AllRestaurantsPage() {
       </div>
 
       {/* Right Side: Map */}
-      <div className="lg:w-1/2 w-full">
+      <div className="lg:w-1/2 w-full mt-5 lg:mt-0">
         <iframe
           title="map"
           src="https://maps.google.com/maps?q=Singapore&output=embed"

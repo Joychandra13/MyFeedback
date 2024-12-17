@@ -10,11 +10,13 @@ function BellaItalia() {
   return (
     <>
     <Hero/>
+    <div className='p-2'>
     <GallerySection/>
     <ContactInformation/>
     <RatingSection/>
     <ReviewSection/>
     <Discover/>
+    </div>
     </>
   )
 }
