@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
+import { IoFilterSharp } from "react-icons/io5";
+
 
 // Sample review data
 const reviews = [
@@ -129,19 +131,21 @@ const ReviewSection = () => {
             onClick={() => setFilterDropdownVisible(!isFilterDropdownVisible)}
             className="font-Roboto"
           >
+            <IoFilterSharp />
             Filter
           </Button>
 
           {/* Filter Dropdown Menu */}
           {isFilterDropdownVisible && (
-            <div className="absolute top-[110%] right-[30px] bg-white border rounded-lg shadow-lg w-[200px] z-10">
+            <div className="absolute top-[110%] right-[-100px] pb-[34px] bg-white border rounded-lg shadow-lg w-[331px] z-10 ">
+                <h1 className="text-center mt-[26px] text-[22px] mb-[18px] font-Lexend font-bold">filter by rating</h1>
               <div
                 className={`p-2 cursor-pointer text-sm rounded-md ${
                   selectedRating === "5" ? "bg-blue-100" : "hover:bg-gray-100"
                 }`}
                 onClick={() => handleFilterByRating("5")}
               >
-                5 Stars
+                <div className="flex items-center justify-center gap-[24px]"> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">5</p> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">⁎⁎⁎⁎⁎</p> </div>
               </div>
               <div
                 className={`p-2 cursor-pointer text-sm rounded-md ${
@@ -149,15 +153,15 @@ const ReviewSection = () => {
                 }`}
                 onClick={() => handleFilterByRating("4")}
               >
-                4 Stars
+                <div className="flex items-center justify-center gap-[24px]"> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">4</p> <p className=" text-[26px] font-medium font-Roboto"> <span className="text-[#E8A641]">⁎⁎⁎⁎</span>⁎</p> </div>
               </div>
               <div
-                className={`p-2 cursor-pointer text-sm rounded-md ${
+                className={`p-2 cursor-pointer  text-sm rounded-md ${
                   selectedRating === "3" ? "bg-blue-100" : "hover:bg-gray-100"
                 }`}
                 onClick={() => handleFilterByRating("3")}
               >
-                3 Stars
+                <div className="flex items-center justify-center gap-[24px]"> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">3</p> <p className=" text-[26px] font-medium font-Roboto"> <span className="text-[#E8A641]">⁎⁎⁎</span>⁎⁎</p> </div>
               </div>
               <div
                 className={`p-2 cursor-pointer text-sm rounded-md ${
@@ -165,15 +169,15 @@ const ReviewSection = () => {
                 }`}
                 onClick={() => handleFilterByRating("2")}
               >
-                2 Stars
+                <div className="flex items-center justify-center gap-[24px]"> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">2</p> <p className=" text-[26px] font-medium font-Roboto"> <span className="text-[#E8A641]">⁎⁎</span>⁎⁎⁎</p> </div>
               </div>
               <div
-                className={`p-2 cursor-pointer text-sm rounded-md ${
+                className={`p-2 cursor-pointer  text-sm rounded-md ${
                   selectedRating === "1" ? "bg-blue-100" : "hover:bg-gray-100"
                 }`}
                 onClick={() => handleFilterByRating("1")}
               >
-                1 Star
+                <div className="flex items-center justify-center gap-[24px]"> <p className="text-[#E8A641] text-[26px] font-medium font-Roboto">1</p> <p className=" text-[26px] font-medium font-Roboto"> <span className="text-[#E8A641]">⁎</span>⁎⁎⁎⁎</p> </div>
               </div>
             </div>
           )}
@@ -190,7 +194,7 @@ const ReviewSection = () => {
             onClick={() => setSortDropdownVisible(!isSortDropdownVisible)}
             className="font-Roboto mr-[30px]"
           >
-            {selectedSort}
+            Sort{" "}
           </Button>
 
           {/* Sort Dropdown Menu */}

@@ -1,11 +1,29 @@
 import React from "react";
+import {
+  Modal,
+  ModalContent,
+  ModalBody,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 
 function GallerySection() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const openImageModal = (src) => {
+    setSelectedImage(src);
+    setIsImageModalOpen(true);
+  };
+
   return (
     <>
       {/* Header Section */}
       <div className="flex items-center justify-center mt-[-3.5%] z-50">
-      <img className="rounded-full border-5 border-white " src="/Bellaitalia (3).png" alt=""  />
+        <img
+          className="rounded-full border-5 border-white "
+          src="/Bellaitalia (3).png"
+          alt=""
+        />
       </div>
       <div className="text-start mb-[40px] container mx-auto mt-[79px]">
         <h2 className="text-3xl font-bold">
@@ -26,9 +44,12 @@ function GallerySection() {
             alt="Main View"
             className="rounded-lg object-cover w-full"
           />
-          <button className="absolute bottom-[21px] left-[24px] bg-white px-4 py-2 rounded-full shadow-lg text-gray-800 font-semibold">
+          <Button
+            onPress={onOpen}
+            className="absolute bottom-[21px] left-[24px] bg-white px-4 py-2 rounded-full shadow-lg text-gray-800 font-semibold"
+          >
             View all photos (7)
-          </button>
+          </Button>
         </div>
 
         {/* Additional Photos */}
@@ -55,6 +76,38 @@ function GallerySection() {
           />
         </div>
       </div>
+
+      {/* Gallery Modal */}
+      <Modal
+        backdrop="opaque"
+        classNames={{
+          backdrop:
+            "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
+        }}
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size="3xl"
+      >
+        <ModalContent>
+          <ModalBody>
+            {/* Gallery Grid */}
+            <div className="flex-col gap-4 py-[20px]">
+              <img
+                src="/Modal (1).png"
+                alt=""
+                className="w-full object-cover rounded-lg "
+                onClick={() => openImageModal(src)}
+              />
+              <img
+                src="/Modal (2).png"
+                alt=""
+                className="w-full object-cover rounded-lg mt-5 "
+                onClick={() => openImageModal(src)}
+              />
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
   );
 }
