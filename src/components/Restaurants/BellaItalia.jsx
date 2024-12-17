@@ -3,6 +3,7 @@ import Hero from './Hero'
 import GallerySection from './GallerySection'
 import ContactInformation from './ContactInformation'
 import RatingSection from './RatingSection'
+import ReviewSection from './Reviews'
 
 function BellaItalia() {
   return (
@@ -11,6 +12,7 @@ function BellaItalia() {
     <GallerySection/>
     <ContactInformation/>
     <RatingSection/>
+    <ReviewSection/>
     </>
   )
 }
