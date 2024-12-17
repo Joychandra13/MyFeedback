@@ -104,8 +104,8 @@ function Carousel() {
                       alt={slide.heading}
                     />
                     <div className="p-4 text-start">
-                    <h3 className="text-lg font-bold text-primary mb-2">{slide.heading}</h3>
-                    <p className="text-sm text-secondary mb-4">{slide.des}</p>
+                    <h3 className="text-[22px] font-semibold text-secondary font-Lexend mb-2">{slide.heading}</h3>
+                    <p className="text-base text-[#8F8F8F] font-Roboto mb-4">{slide.des}</p>
                     <img
                       className="mb-4"
                       src={slide.review}
