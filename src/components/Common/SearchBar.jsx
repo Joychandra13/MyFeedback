@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router";
 
-
 const searchData = [
   { restaurant: "Kakune restau", city: "Paris" },
   { restaurant: "Kakunexy delux", city: "Rome" },
@@ -44,7 +43,7 @@ function SearchBar() {
     <>
       <div className="relative w-full lg:w-[625px]">
         {/* Search Bar Container */}
-        <div className="flex items-center p-2 rounded-full border bg-white border-[#ADADAD] overflow-hidden shadow-sm" >
+        <div className="flex items-center p-2 rounded-full border bg-white border-[#ADADAD] overflow-hidden shadow-sm">
           {/* Restaurant Input */}
           <input
             type="text"
@@ -72,16 +71,25 @@ function SearchBar() {
           />
 
           {/* Search/Close Button */}
-          <button
-            onClick={isSearching ? clearSearch : handleSearch}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-primary rounded-full p-[14px]"
-          >
-            {isSearching ? (
+          {isSearching ? (
+            // Close button to clear and hide search results
+            <button
+              onClick={clearSearch}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-primary rounded-full p-[14px] hover:bg-red-500"
+            >
               <AiOutlineClose size={16} />
-            ) : (
-              <AiOutlineSearch size={16} />
-            )}
-          </button>
+            </button>
+          ) : (
+            // Search button to navigate to allrestaurants page
+            <NavLink to="/allrestaurants">
+              <button
+                onClick={handleSearch}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-primary rounded-full p-[14px] hover:bg-blue-500"
+              >
+                <AiOutlineSearch size={16} />
+              </button>
+            </NavLink>
+          )}
         </div>
 
         {/* Search Results */}
@@ -89,13 +97,13 @@ function SearchBar() {
           <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-lg mt-2 max-h-60 overflow-y-auto">
             {results.length > 0 ? (
               results.map((item, index) => (
-                <NavLink to ="/allrestaurants"> 
-                <li
-                  key={index}
-                  className="p-3 text-black  cursor-pointer transition"
-                >
-                  {item.restaurant}, {item.city}
-                </li>
+                <NavLink to="/allrestaurants">
+                  <li
+                    key={index}
+                    className="p-3 text-black  cursor-pointer transition"
+                  >
+                    {item.restaurant}, {item.city}
+                  </li>
                 </NavLink>
               ))
             ) : (
