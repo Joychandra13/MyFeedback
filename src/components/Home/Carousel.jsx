@@ -82,7 +82,7 @@ function Carousel() {
   }
 
   return (
-    <section className="overflow-hidden px-[54px] mt-[71px] pt-[20px]  bg-primary  pb-[55px] rounded-[8px] container mx-auto">
+    <section className="overflow-hidden md:px-[54px] px-2 py-2 mt-[71px] md:pt-[20px]  bg-primary  md:pb-[55px] rounded-[8px] container mx-auto">
         <h1 className="text-white text-[32px] pb-[30px] ">Find the best restaurant ratings below</h1>
       <div className="relative w-full mx-auto overflow-hidden">
         {/* Carousel for large screens */}
