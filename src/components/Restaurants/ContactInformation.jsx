@@ -3,7 +3,7 @@ import React from "react";
 function ContactInformation() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 p-5 container mx-auto mt-[70px]">
+      <div className="grid grid-cols-2 gap-8 p-5 container mx-auto mt-[70px] border-b-1 pb-[52px]">
         {/* Info Section */}
         <div>
           <h3 className="text-[34px] font-semibold mb-[42px] font-Lexend">More informations</h3>
