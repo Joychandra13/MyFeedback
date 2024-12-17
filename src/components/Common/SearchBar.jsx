@@ -42,7 +42,7 @@ function SearchBar() {
     <>
       <div className="relative w-full lg:w-[625px]">
         {/* Search Bar Container */}
-        <div className="flex items-center p-2 rounded-full border border-[#ADADAD] overflow-hidden shadow-sm" >
+        <div className="flex items-center p-2 rounded-full border bg-white border-[#ADADAD] overflow-hidden shadow-sm" >
           {/* Restaurant Input */}
           <input
             type="text"
@@ -89,7 +89,7 @@ function SearchBar() {
               results.map((item, index) => (
                 <li
                   key={index}
-                  className="p-3 text-black hover:bg-gray-100 cursor-pointer transition"
+                  className="p-3 text-black  cursor-pointer transition"
                 >
                   {item.restaurant}, {item.city}
                 </li>

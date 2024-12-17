@@ -6,15 +6,15 @@ import SearchBar from "./Common/SearchBar";
 export default function Nevbar() {
   return (
     <Navbar maxWidth="2xl" className="border-b-1 border-[#DCDCDC] pt-[42px] pb-[27px]">
-      <NavbarBrand>
+      <NavbarBrand className="md:flex gap-4 hidden">
         <img src="/Logo.png" alt="" />
       </NavbarBrand>
-      <NavbarContent className="flex gap-4 " justify="center" >
+      <NavbarContent className="flex gap-4" justify="center" >
         <NavbarItem >
           <SearchBar/>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="md:flex gap-4 hidden">
         <NavbarItem >
             <a href="/"><AiOutlineGlobal className="w-[20px] h-[20px]"/></a>
         </NavbarItem>

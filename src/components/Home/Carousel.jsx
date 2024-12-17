@@ -96,7 +96,7 @@ function Carousel() {
           {groupedSlides.map((group, groupIndex) => (
             <div key={groupIndex} className="flex w-full">
               {group.map((slide) => (
-                <div key={slide.id} className="w-full md:w-[25%] sm:w-[50%] flex-shrink-0 p-4">
+                <div key={slide.id} className="w-full lg:w-[25%] flex-shrink-0 p-4">
                   <div className="bg-white rounded-lg shadow-lg  text-center">
                     <img
                       className="w-full h-[213px] object-cover rounded-lg"
