@@ -1,6 +1,7 @@
 import './App.css'
 
 import Footer from './components/Footer'
+import Carousel from './components/Home/Carousel'
 import IconSection from './components/Home/IconSection'
 import Nevbar from './components/Nevbar'
 
@@ -12,6 +13,7 @@ function App() {
     <>
     <Nevbar/>
     <IconSection/>
+    <Carousel/>
     <Footer/>
     </>
   )
