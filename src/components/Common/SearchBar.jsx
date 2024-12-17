@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { NavLink } from "react-router";
+
 
 const searchData = [
   { restaurant: "Kakune restau", city: "Paris" },
@@ -87,12 +89,14 @@ function SearchBar() {
           <ul className="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-lg mt-2 max-h-60 overflow-y-auto">
             {results.length > 0 ? (
               results.map((item, index) => (
+                <NavLink to ="/allrestaurants"> 
                 <li
                   key={index}
                   className="p-3 text-black  cursor-pointer transition"
                 >
                   {item.restaurant}, {item.city}
                 </li>
+                </NavLink>
               ))
             ) : (
               <li className="p-3 text-gray-500 text-sm">

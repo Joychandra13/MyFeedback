@@ -17,7 +17,7 @@ function IconSection() {
     <>
     <div className='flex flex-wrap md:gap-[56px] gap-[30px] justify-center items-center container mx-auto mt-[42px]'>
         {icons.map((pic)=>(
-            <div><img src={pic.icon} alt="" /></div>
+            <div className='hover:border-b-3 hover:border-primary pb-[12px]'><img src={pic.icon} alt="" /></div>
         ))}
     </div>
     </>
