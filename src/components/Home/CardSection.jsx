@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Common/Card";
+import { Button } from "@nextui-org/react";
 
 function CardSection() {
   const cardsData = [
@@ -105,6 +106,10 @@ function CardSection() {
           review={card.review}
           />
         ))}
+      </div>
+      <div className="text-center mt-[52px]">
+      <h1 className="text-[22px] text-secondary">Discover more cool restaurants</h1>
+      <Button radius="full" color="primary" size="lg" className="font-Roboto mt-[20px]">Show more</Button>
       </div>
     </div>
   );
