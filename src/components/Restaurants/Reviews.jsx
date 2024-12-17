@@ -10,32 +10,32 @@ const reviews = [
     date: "29/11/2023",
     stars: 4,
     comment:
-    "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-},
+      "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+  },
   {
     name: "Mei Ling",
     location: "Singapore, Orchard Boulevard",
     date: "09/05/2023",
     stars: 5,
     comment:
-    "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-},
+      "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+  },
   {
     name: "Wei Xiong",
     location: "Singapore, Takashimaya",
     date: "01/05/2023",
     stars: 3,
     comment:
-    "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-},
+      "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+  },
   {
     name: "Ming Wei",
     location: "Singapore, Little India",
     date: "31/04/2023",
     stars: 4,
     comment:
-    "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
-},
+      "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+  },
   {
     name: "Xin Yi",
     location: "Singapore, Zen rooms",
@@ -232,32 +232,41 @@ const ReviewSection = () => {
       </div>
 
       {/* Reviews Section */}
-      <div className="space-y-[27px]">
+      <div className="space-y-[27px] mb-10">
         {filteredReviews.map((review, index) => (
           <div
             key={index}
             className="p-[21px] bg-[#F8F8F8] rounded-lg shadow-sm flex "
           >
             <div className="max-w-[579px] flex gap-[9px]">
-            {/* Avatar Placeholder */}
-            <div className="flex items-start">
-              <div className="w-[60px] h-[60px] rounded-full bg-gray-300 flex items-center justify-center text-gray-500 text-xl">
-                <img src="/ReviewCarousel (1).png" alt="" />
+              {/* Avatar Placeholder */}
+              <div className="flex items-start">
+                <div className="w-[60px] h-[60px] rounded-full bg-gray-300 flex items-center justify-center text-gray-500 text-xl">
+                  <img src="/ReviewCarousel (1).png" alt="" />
+                </div>
               </div>
-            </div>
-            {/* Review Content */}
-            <div>
-              <h4 className="font-semibold font-Lexend text-[21px]">{review.name}</h4>
-              <p className="text-[#8A8A8A] text-base">{review.location}</p>
-              <div className="flex items-end gap-2 mt-[14px] mb-[28px] h-[22px]">
-                <img src="/Bellaitalia (11).png" alt="" />
-                <span className="text-sm text-[#343434]">{review.date}</span>
+              {/* Review Content */}
+              <div>
+                <h4 className="font-semibold font-Lexend text-[21px]">
+                  {review.name}
+                </h4>
+                <p className="text-[#8A8A8A] text-base">{review.location}</p>
+                <div className="flex items-end gap-2 mt-[14px] mb-[28px] h-[22px]">
+                  <img src="/Bellaitalia (11).png" alt="" />
+                  <span className="text-sm text-[#343434]">{review.date}</span>
+                </div>
+                <p className="text-[#5E5E5E] mt-2 text-base font-Roboto">
+                  {review.comment}
+                </p>
               </div>
-              <p className="text-[#5E5E5E] mt-2 text-base font-Roboto">{review.comment}</p>
-            </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-[86px]">
+        <Button radius="full" color="primary" size="lg" className="font-Roboto">
+          Show more reviews{" "}
+        </Button>
       </div>
     </div>
   );
