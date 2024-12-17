@@ -8,7 +8,7 @@ const restaurants = [
     id: 1,
     name: "The snug",
     review: "/ar1 (3).png",
-    image: "/ Allrestaurants (8).png",
+    image: "/Allrestaurants (8).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 654,
@@ -18,7 +18,7 @@ const restaurants = [
     id: 2,
     name: "Bottega",
     review: "/ar1 (2).png",
-    image: "/ Allrestaurants (7).png",
+    image: "/Allrestaurants (7).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 1654,
@@ -28,7 +28,7 @@ const restaurants = [
     id: 3,
     name: "Little Shucker",
     review: "/ar1 (1).png",
-    image: "/ Allrestaurants (6).png",
+    image: "/Allrestaurants (6).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 553,
@@ -38,7 +38,7 @@ const restaurants = [
     id: 4,
     name: "Lokma",
     review: "/ar1 (3).png",
-    image: "/ Allrestaurants (5).png",
+    image: "/Allrestaurants (5).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 654,
@@ -48,7 +48,7 @@ const restaurants = [
     id: 5,
     name: "Starbelly",
     review: "/ar1 (3).png",
-    image: "/ Allrestaurants (4).png",
+    image: "/Allrestaurants (4).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 654,
@@ -58,7 +58,7 @@ const restaurants = [
     id: 6,
     name: "The melt",
     review: "/ar1 (3).png",
-    image: "/ Allrestaurants (3).png",
+    image: "/Allrestaurants (3).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 654,
@@ -68,7 +68,7 @@ const restaurants = [
     id: 7,
     name: "The melt",
     review: "/ar1 (3).png",
-    image: "/ Allrestaurants (2).png",
+    image: "/Allrestaurants (2).png",
     description:
       "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
     reviews: 654,
@@ -113,7 +113,7 @@ function AllRestaurantsPage() {
               radius="full"
               variant="bordered"
               size="lg"
-              startContent={ <img src="/ Allrestaurants (1).png" alt=""/>}
+              startContent={ <img src="/Allrestaurants (1).png" alt=""/>}
               onClick={() => setDropdownVisible(!isDropdownVisible)}
               className="font-Roboto mr-[30px]"
             >
